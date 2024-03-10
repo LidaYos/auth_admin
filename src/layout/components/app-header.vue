@@ -129,6 +129,7 @@ const handleRouteClear = () => {
         right: 10px;
         background-color: #ffffff;
         z-index: 999;
+        margin-right: 25px;
 
         span {
             margin: 0 5px 0 5px;

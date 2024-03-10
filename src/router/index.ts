@@ -2,6 +2,10 @@ import storage from "@/utils/storage";
 
 import { useList } from "@/stores/user";
 
+// 顶部进度条
+import NProgress from "nprogress";
+import "nprogress/nprogress.css";
+
 import {
   type RouteLocationNormalized,
   createRouter,
@@ -22,7 +26,6 @@ for (let key in Router) {
 }
 
 // console.log(modules);
-
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -48,7 +51,14 @@ const router = createRouter({
 // 路由守卫
 // 白名单，不用登录也可以访问
 const whiteName = ["login"];
+
+NProgress.configure({
+  easing: "ease-out",
+});
+
 router.beforeEach(async (to: RouteLocationNormalized): any => {
+  NProgress.start();
+
   // 获取token
   const token = storage.get("token");
 
@@ -66,7 +76,6 @@ router.beforeEach(async (to: RouteLocationNormalized): any => {
       const createdRoutes = await store.userList();
       // 动态生成路由
       createdRoutes.forEach(item => {
-
         // 生成
         router.addRoute("index", {
           path: item.router,
@@ -79,14 +88,17 @@ router.beforeEach(async (to: RouteLocationNormalized): any => {
   }
 });
 
+router.afterEach(() => {
+  NProgress.done();
+});
+
 // 重置路由，将动态路由删除
 router.reset = () => {
   const store = useList();
   store.authRoutes.forEach(item => {
-    const name = item.router.split("/").join("-").substr(1)
-    router.removeRoute(name)
-  })
-}
-
+    const name = item.router.split("/").join("-").substr(1);
+    router.removeRoute(name);
+  });
+};
 
 export default router;

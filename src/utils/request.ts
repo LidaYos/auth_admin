@@ -14,6 +14,11 @@ import router from "@/router";
 
 import { setRefreshToken } from "@/api/login";
 
+// 顶部进度条
+import NProgress from "nprogress";
+import "nprogress/nprogress.css";
+
+
 const config: AxiosRequestConfig = {
   baseURL: import.meta.env.VITE_API_BASEURL,
   timeout: 1000 * 10,
@@ -32,6 +37,7 @@ class RequestHttp {
     // 请求拦截器
     this.server.interceptors.request.use(
       config => {
+        NProgress.start()
         // 获取token
         const token = storage.get("token");
         // 获取refreshToken
@@ -91,6 +97,7 @@ class RequestHttp {
     // 响应拦截器
     this.server.interceptors.response.use(
       response => {
+        NProgress.done()
         const result = response.data;
         // 业务判断
         if (result.code !== 1000) {
