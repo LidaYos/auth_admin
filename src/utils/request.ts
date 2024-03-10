@@ -97,7 +97,7 @@ class RequestHttp {
           // 失败
           ElMessage({
             type: "warning",
-            message: result.messag || "网络异常，请稍后重试！",
+            message: result.message || "网络异常，请稍后重试！",
           });
           return Promise.reject(result);
         }

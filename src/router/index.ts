@@ -21,6 +21,9 @@ for (let key in Router) {
   modules[newKey] = Router[key];
 }
 
+// console.log(modules);
+
+
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [

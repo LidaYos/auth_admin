@@ -7,6 +7,9 @@
             <div class="page-layout__top">
                 <AppHeader />
             </div>
+            <div class="page-layout__tab">
+                <AppTab />
+            </div>
             <div class="page-layout__container">
                 <div class="content">
                     <RouterView />
@@ -20,6 +23,7 @@
 <script lang="ts" setup>
 import AppHeader from "@/layout/components/app-header.vue"
 import AppMenu from "@/layout/components/app-menu.vue"
+import AppTab from "@/layout/components/app-tab.vue"
 
 </script>
 
@@ -67,6 +71,12 @@ import AppMenu from "@/layout/components/app-menu.vue"
             flex: 1;
             margin-bottom: 25px;
         }
+    }
+
+    &__tab {
+        width: 100%;
+        height: 40px;
+        background-color: #ffffff;
     }
 
     &__foot {
