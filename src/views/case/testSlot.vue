@@ -1,14 +1,13 @@
 <template>
-    <div>
-        <h1>加纳~</h1>
-        <SlotItem>
-            1、haihaihai
-        </SlotItem>
-        <SlotItem slot="custom">
-            2、不错
-        </SlotItem>
-
-    </div>
+    <SlotItem>
+        <template v-slot:footer="{ testProps }">
+            <template v-for="item in testProps" :key="item.id">
+                <li>
+                    {{ item.title }}
+                </li>
+            </template>
+        </template>
+    </SlotItem>
 </template>
 
 <script lang="ts" setup>
