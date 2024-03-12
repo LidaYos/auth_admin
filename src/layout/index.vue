@@ -70,6 +70,7 @@ import AppTab from "@/layout/components/app-tab.vue"
             // 需要完成这里
             flex: 1;
             margin-bottom: 25px;
+            overflow: auto;
         }
     }
 

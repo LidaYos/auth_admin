@@ -16,6 +16,8 @@ import persisted from "pinia-plugin-persistedstate";
 // element图标
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
+import RightToolbar from "@/components/RightToolbar/index.vue"
+
 const app = createApp(App);
 const pinia = createPinia();
 
@@ -23,6 +25,9 @@ app.use(router);
 app.use(pinia);
 // 自定义指令
 app.directive("focus", focus);
+
+// 全局组件
+app.component("RightToolbar", RightToolbar)
 
 // 使用持久化
 pinia.use(persisted);
