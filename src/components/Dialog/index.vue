@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <el-dialog
     v-model="visible"
     :title="title"
@@ -10,6 +11,11 @@
     :footerVisible="footerVisible"
     @close="closeDialog"
   >
+=======
+  <el-dialog v-model="visible" :title="title" :width="width" :append-to-body="appendToBody"
+    :close-on-click-modal="closeOnClickModal" :center="center" :fullscreen="fullscreen" :footerVisible="footerVisible"
+    @close="closeDialog">
+>>>>>>> da384893d1f3bcaada05bf0b7054ac9b58726136
     <slot />
     <template #footer v-if="footerVisible">
       <div>
@@ -20,7 +26,11 @@
   </el-dialog>
 </template>
 
+<<<<<<< HEAD
 <script setup>
+=======
+<script lang="ts" setup>
+>>>>>>> da384893d1f3bcaada05bf0b7054ac9b58726136
 import { useVModel } from '@vueuse/core'
 
 const emits = defineEmits(['update:modelValue', 'confirm', 'cancel', 'close'])

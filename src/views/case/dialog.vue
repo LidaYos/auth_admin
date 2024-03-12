@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <!-- <Dialog v-model="isShow"> -->
 
   <div class="table">
@@ -318,3 +319,19 @@ console.log(autoWidth);
     overflow: auto;
 }
 </style>
+=======
+    <Dialog v-model="isShow" :title="title">
+        <div>
+            11
+        </div>
+    </Dialog>
+</template>
+
+<script lang="ts" setup>
+import Dialog from "@/components/Dialog/index.vue"
+import { ref } from "vue"
+
+const isShow = ref(true)
+const title = ref("测试")
+</script>
+>>>>>>> da384893d1f3bcaada05bf0b7054ac9b58726136
