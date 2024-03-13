@@ -8,19 +8,12 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Dialog: typeof import('./src/components/Dialog/index.vue')['default']
-<<<<<<< HEAD
     DictTag: typeof import('./src/components/DictTag/index.vue')['default']
-=======
->>>>>>> da384893d1f3bcaada05bf0b7054ac9b58726136
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElBreadcrumb: typeof import('element-plus/es')['ElBreadcrumb']
     ElBreadcrumbItem: typeof import('element-plus/es')['ElBreadcrumbItem']
     ElButton: typeof import('element-plus/es')['ElButton']
-    ElDialog: typeof import('element-plus/es')['ElDialog']
-<<<<<<< HEAD
     ElDrawer: typeof import('element-plus/es')['ElDrawer']
-=======
->>>>>>> da384893d1f3bcaada05bf0b7054ac9b58726136
     ElDropdown: typeof import('element-plus/es')['ElDropdown']
     ElDropdownItem: typeof import('element-plus/es')['ElDropdownItem']
     ElDropdownMenu: typeof import('element-plus/es')['ElDropdownMenu']
@@ -38,6 +31,7 @@ declare module 'vue' {
     ElTabPane: typeof import('element-plus/es')['ElTabPane']
     ElTabs: typeof import('element-plus/es')['ElTabs']
     ElTag: typeof import('element-plus/es')['ElTag']
+    ElText: typeof import('element-plus/es')['ElText']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     RightToolbar: typeof import('./src/components/RightToolbar/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

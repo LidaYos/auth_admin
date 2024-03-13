@@ -56,6 +56,7 @@ const handleTabsEdit = (
       title: 'New Tab',
       name: newTabName,
       content: 'New Tab content',
+      close: false
     })
     editableTabsValue.value = newTabName
   } else if (action === 'remove') {
