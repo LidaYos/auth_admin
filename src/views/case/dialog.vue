@@ -1,16 +1,17 @@
 <template>
   <!-- <Dialog v-model="isShow"> -->
-
+<div class="main">
   <div class="table">
-
-    <Table
+    <!-- <Table
       :columns="tableOptions.columns"
       :data="tableOptions.data"
       :loading="tableOptions.loading"
       :width="autoWidth"
+      
     >
-    </Table>
+    </Table> -->
   </div>
+</div>
 
   <!-- </Dialog> -->
 </template>
@@ -282,7 +283,6 @@ const tableOptions = reactive({
       label: "ID",
       align: "center",
       minWidth: 120,
-      overflowTooltip: true,
     },
     { prop: "sendMobile", label: "手机号码", align: "center", minWidth: 120 },
     {
@@ -290,7 +290,6 @@ const tableOptions = reactive({
       label: "短信内容",
       align: "center",
       minWidth: 160,
-      //   overflowTooltip: true,
     },
     {
       prop: "type",
@@ -303,18 +302,23 @@ const tableOptions = reactive({
   data: list || [],
 });
 
-// 
-const { autoWidth } = useAutoWidth({ width: 900, fullWidth: 900 })
+//
+const { autoWidth } = useAutoWidth({ width: 900, fullWidth: 900 });
 console.log(autoWidth);
-
-
 </script>
 
 <style lang="scss" scoped>
-.table{
-    height: 100%;
-    overflow: hidden;
-    background-color: aqua;
-    overflow: auto;
+.main{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex: 1;
+}
+.table {
+  
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+  background-color: aqua;
 }
 </style>

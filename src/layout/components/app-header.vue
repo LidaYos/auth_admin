@@ -84,15 +84,15 @@ const breadcrumb = computed(() => {
   const menu = menus?.find(
     (item: any) => item.router === router.currentRoute.value.path
   );
-  // 不存在，则显示 首页
-  if (!menu) {
-    return [{ id: 0, name: "首页", router: "/" }];
+  // 不存在 或者在首页，则显示 首页
+  if (!menu || menu.name === "首页") {
+    return [{ id: 0, name: "首页", router: "/useHome/home" }];
   }
   // 存在的话，组成需要的形式 返回
   const id = menu.id;
   const list = getMenusById(menus, id);
   // 在前面 添加一个首页
-  list.unshift({ id: 0, name: "首页", router: "/case/testSlot" });
+  list.unshift({ id: 0, name: "首页", router: "/useHome/home" });
   return list;
 });
 

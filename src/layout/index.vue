@@ -12,7 +12,9 @@
       </div>
       <div class="page-layout__container">
         <div class="content">
-          <RouterView />
+          
+            <RouterView />
+
         </div>
       </div>
       <div class="page-layout__foot"></div>
@@ -44,7 +46,6 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener("keydown", keyDown, true);
-
 });
 </script>
 
@@ -81,7 +82,6 @@ onUnmounted(() => {
     box-sizing: border-box;
     background-color: #eff0f2;
     display: flex;
-    // flex-direction: column;
 
     .content {
       background-color: #fff;
@@ -89,8 +89,13 @@ onUnmounted(() => {
       padding: 10px;
       box-sizing: border-box;
       // 需要完成这里
-      flex: 1;
+      // flex: 1;
+      height: 100%;
+      width: 100%;
       margin-bottom: 25px;
+      display: flex;
+      justify-content: start;
+      align-items: start;
       overflow: auto;
     }
   }
@@ -102,8 +107,8 @@ onUnmounted(() => {
   }
 
   &__foot {
-    position: absolute;
-    bottom: 0;
+    // position: absolute;
+    // bottom: 0;
     height: 25px;
     width: 100%;
     background-color: #fff;

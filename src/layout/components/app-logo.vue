@@ -1,7 +1,7 @@
 <template>
-  <div class="page">
+  <!-- <div class="page">
     <img class="img" src="../../assets/img/logo.png" alt="" />
-  </div>
+  </div> -->
 </template>
 
 <style lang="scss" scoped>
