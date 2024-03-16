@@ -1,7 +1,7 @@
 /**
  * 用户相关
  */
-import { getLogin, getLogout, type Itoken } from "@/api/login";
+import { getLogout, type Itoken } from "@/api/login";
 import { getUserList } from "@/api/user";
 import { defineStore } from "pinia";
 import storage from "@/utils/storage";

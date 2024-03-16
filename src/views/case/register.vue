@@ -1,9 +1,11 @@
 <template>
     <button class="init" @click="handle">{{ count }}</button>
+    <iframe>
+    </iframe>
 </template>
 
 <script lang="ts" setup>
-import { reactive, ref, onMounted, computed, watch } from "vue"
+import { reactive, computed, watch } from "vue"
 import { register } from "@/utils/register"
 
 const init = reactive({ width: 100 })
