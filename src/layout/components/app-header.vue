@@ -51,7 +51,7 @@ import { type Info, useList } from "@/stores/user";
 import { ElMessageBox } from "element-plus";
 import { computed } from "vue";
 import { useRouter } from "vue-router";
-import { getMenusById } from "@/utils/getTreeList.ts";
+import { getMenusById } from "@/utils/getTreeList";
 import { FullScreenSetting } from "@/stores/fullscreen";
 
 const router = useRouter();

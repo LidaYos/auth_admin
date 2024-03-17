@@ -21,7 +21,7 @@ const Router = import.meta.glob([
 // 路由信息
 const modules: any[] = [];
 for (let key in Router) {
-  const newKey : any = key.replace("../views", "").replace(".vue", "");
+  const newKey: any = key.replace("../views", "").replace(".vue", "");
   modules[newKey] = Router[key];
 }
 
